@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeAlpha - Modern Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="calculator-container">
+        <header class="calculator-header">
+            <h1>CodeAlpha Calculator</h1>
+        </header>
+        
+        <div class="calculator" role="region" aria-label="Calculator">
+            <!-- Display Section -->
+            <div class="display" role="status" aria-live="polite">
+                <div id="previous-operand" class="previous-operand"></div>
+                <div id="current-operand" class="current-operand">0</div>
+            </div>
+
+            <!-- Keypad Grid -->
+            <div class="keypad">
+                <button class="btn function" data-action="clear" aria-label="Clear all">AC</button>
+                <button class="btn function" data-action="delete" aria-label="Delete last character">DEL</button>
+                <button class="btn function" data-action="sign" aria-label="Change sign">+/-</button>
+                <button class="btn operator" data-action="operator" data-value="/" aria-label="Divide">&divide;</button>
+
+                <button class="btn number" data-value="7">7</button>
+                <button class="btn number" data-value="8">8</button>
+                <button class="btn number" data-value="9">9</button>
+                <button class="btn operator" data-action="operator" data-value="*" aria-label="Multiply">&times;</button>
+
+                <button class="btn number" data-value="4">4</button>
+                <button class="btn number" data-value="5">5</button>
+                <button class="btn number" data-value="6">6</button>
+                <button class="btn operator" data-action="operator" data-value="-" aria-label="Subtract">-</button>
+
+                <button class="btn number" data-value="1">1</button>
+                <button class="btn number" data-value="2">2</button>
+                <button class="btn number" data-value="3">3</button>
+                <button class="btn operator" data-action="operator" data-value="+" aria-label="Add">+</button>
+
+                <button class="btn number zero" data-value="0">0</button>
+                <button class="btn number" data-value="." aria-label="Decimal point">.</button>
+                <button class="btn operator equals" data-action="calculate" aria-label="Calculate">=</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="calculator-footer">
+        <p>&copy; 2026 CodeAlpha Frontend Internship. Developed by Intern.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
